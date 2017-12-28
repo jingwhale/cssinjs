@@ -76,18 +76,28 @@ NEJ.define([
         _loadCss: function () {
             this.data.css["ux-cssinjs-order_top"] = {
                 "font-size": "18px",
-                "color": "red",
-                background: polished.adjustHue(180, '#666')
+                "color": "#fff",
+                "text-align": "center",
+                background: polished.adjustHue(180, '#1E90FF')
             };
 
             this.data.css["ux-cssinjs-order-bottom_left"] = {
                 "width": "50%",
-                background: polished.adjustHue(180, '#999')
+                "color": "#fff",
+                "text-align": "center",
+                background: polished.adjustHue(180, '#9932CC'),
+                ...polished.hideText()
             };
 
             this.data.css["ux-cssinjs-order-bottom_right"] = {
                 "width": "50%",
-                background: polished.adjustHue(180, '#666')
+                "color": "#fff",
+                "text-align": "center",
+                background: polished.adjustHue(180, '#00BFFF')
+            };
+
+            this.data.css["ux-cssinjs-order-bottom_animation"] = {
+                ...polished.animation(['rotate', '1s', 'ease-in-out'], ['colorchange', '2s'])
             };
 
             // this._setCss1();
